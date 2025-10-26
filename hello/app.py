@@ -1,12 +1,11 @@
 def greet(name: str) -> str:
-    if not name or not name.strip():
+    if name is None:
         return "Hello, World!"
-    clean = name.strip()
-    return f"Hello, {clean}!"
-
+    if name == "":
+        return "Hello, World!"
+    if name.strip() == "":
+        return "Hello, !"
+    return f"Hello, {name.strip()}!"
 
 def main() -> None:
     print(greet("World"))
-
-if __name__ == "__main__":
-    main()
