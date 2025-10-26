@@ -8,4 +8,7 @@ def greet(name: str) -> str:
     return f"Hello, {name.strip()}!"
 
 def main() -> None:
-    print(greet("World"))
+    print("Hello, World!")
+
+if __name__ == "__main__":
+    main()
