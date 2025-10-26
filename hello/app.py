@@ -1,7 +1,9 @@
 def greet(name: str) -> str:
-    if not name:
+    if not name or not name.strip():
         return "Hello, World!"
-    return f"Hello, {name}!"
+    clean = name.strip()
+    return f"Hello, {clean}!"
+
 
 def main() -> None:
     print(greet("World"))
